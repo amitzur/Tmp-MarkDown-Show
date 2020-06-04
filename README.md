@@ -3,10 +3,12 @@
 
 ## via Configuration
 
+The examples use `@applitools/eyes-selenium` but are relevant also for webdriver.io and protractor SDK's.
+
 ### Using single iOS device via `addBrowser`
 
 ```js
-const {IosDeviceName, IosScreenOrientation} = require('@applitools/eyes-sdk-core')
+const {IosDeviceName, IosScreenOrientation} = require('@applitools/eyes-selenium')
 // ...
 configuration.addBrowser({
   iosDeviceInfo: {
@@ -18,7 +20,7 @@ configuration.addBrowser({
 
 ### multiple devices via `addBrowsers`
 ```js
-const {IosDeviceName, IosScreenOrientation} = require('@applitools/eyes-sdk-core')
+const {IosDeviceName, IosScreenOrientation} = require('@applitools/eyes-selenium')
 // ...
 configuration.addBrowsers(
     {
@@ -38,7 +40,7 @@ configuration.addBrowsers(
 
 ### chrome emulation - existing
 ```js
-const {ScreenOrientation, DeviceName} = require('@applitools/eyes-sdk-core')
+const {ScreenOrientation, DeviceName} = require('@applitools/eyes-selenium')
 // ...
 configuration.addBrowser({
     deviceName: DeviceName.iPhone_XS,
@@ -48,7 +50,7 @@ configuration.addBrowser({
 
 ### chrome emulation - new (like iosDeviceInfo)
 ```js
-const {ScreenOrientation, DeviceName} = require('@applitools/eyes-sdk-core')
+const {ScreenOrientation, DeviceName} = require('@applitools/eyes-selenium')
 // ...
 configuration.addBrowser({
       chromeEmulationInfo: {
@@ -61,7 +63,7 @@ configuration.addBrowser({
 
 ### desktop - existing
 ```js
-const {BrowserType} = require('@applitools/eyes-sdk-core')
+const {BrowserType} = require('@applitools/eyes-selenium')
 // ...
 configuration.addBrowser({
   name: BrowserType.EDGE_CHROMIUM_TWO_VERSIONS_BACK,
